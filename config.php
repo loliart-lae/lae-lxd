@@ -4,6 +4,7 @@ require_once __DIR__ . '/Workerman/Autoloader.php';
 require_once __DIR__ . '/extend/route.php';
 require_once __DIR__ . '/extend/lxd.php';
 
+# Your token here
 $token = 'AIWRQBA29q8G21aviu1';
 define('__TOKEN__', $token);
 
