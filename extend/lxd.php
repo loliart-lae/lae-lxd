@@ -68,6 +68,8 @@ class Lxd
 
     static public function start($id)
     {
+        console("Starting instance inst-{$id}");
+
         exec("lxc start inst-{$id} >/dev/null 2>&1");
         return [
             'status' => 1,
@@ -77,6 +79,7 @@ class Lxd
 
     static public function stop($id)
     {
+        console("Stopping instance inst-{$id}");
         exec("lxc stop inst-{$id} -f");
         return [
             'status' => 1,
