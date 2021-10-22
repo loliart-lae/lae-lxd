@@ -77,7 +77,7 @@ class Lxd
 
     static public function stop($id)
     {
-        exec("lxc stop inst-{$id}");
+        exec("lxc stop inst-{$id} -f");
         return [
             'status' => 1,
             'lan_ip' => $id

@@ -15,6 +15,10 @@ class Exec
                 return Lxd::start($request->get('id'));
                 break;
 
+            case '/lxd/stop':
+                return Lxd::stop($request->get('id'));
+                break;
+
             case '/lxd/delete':
                 return Lxd::delete($request->get('id'));
                 break;
@@ -26,7 +30,7 @@ class Exec
             case '/lxd/forward_delete':
                 return Lxd::forward_delete($request);
                 break;
-                
+
             case '/lxd/resize':
                 return Lxd::resize($request);
                 break;
