@@ -15,6 +15,8 @@ class Lxd
 
         console("Initing instance {$id} using {$image}");
 
+        exec("lxc delete {$id} --force");
+
         exec("lxc init {$image} {$id}");
 
         echo "Setting up CPU.      ";
